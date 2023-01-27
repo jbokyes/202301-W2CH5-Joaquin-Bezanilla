@@ -6,9 +6,11 @@ export const generateArray = (w) => {
 
   for (let k = 0; k < arr.length; k++) {
     for (let o = 0; o < arr[k].length; o++) {
-      arr[k][o] = "_";
+      arr[k][o] = Math.floor(Math.random() * 2);
     }
   }
+
+  console.table(arr);
 
   return arr.length;
 };
