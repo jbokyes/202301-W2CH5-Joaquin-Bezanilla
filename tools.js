@@ -10,6 +10,5 @@ export const generateArray = (w) => {
     }
   }
 
-  console.table(arr);
   return arr.length;
 };
