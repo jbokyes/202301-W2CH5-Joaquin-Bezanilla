@@ -1,5 +1,3 @@
-import { generateArray } from "./generateArray.js";
-
 export const checkForNeighbors = (arr, x, y) => {
   let currentCell = 0;
   for (let k = -1; k <= 1; k++) {

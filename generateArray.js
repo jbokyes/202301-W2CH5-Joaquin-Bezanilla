@@ -9,6 +9,7 @@ export const generateArray = (w) => {
       arr[k][o] = Math.floor(Math.random() * 2);
     }
   }
+
   console.table(arr);
 
   return arr.length;
