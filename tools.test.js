@@ -33,13 +33,13 @@ describe("Given checkForNeighbors function", () => {
 
 describe("Given checkForWalls function", () => {
   describe("When we have cells at any wall or edge", () => {
-    test("Then we should check only for the ones who have 8 cells around", () => {
+    test("We shouldn't check if they have neighbors", () => {
       const r = checkForWalls([
-        [1, 0, 0],
-        [1, 1, 0],
-        [1, 0, 0],
+        [0, 0, 0],
+        [0, 1, 0],
+        [0, 0, 0],
       ]);
-      expect(r).toEqual(3);
+      expect(r).toEqual(0);
     });
   });
 });
