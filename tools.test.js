@@ -1,15 +1,15 @@
 import { generateArray } from "./generateArray.js";
 import { checkForNeighbors } from "./checkForNeighbors.js";
-
+import { checkForWalls } from "./checkForWalls.js";
 describe("Given generateArray function", () => {
   describe("When We have a squared array of arrays", () => {
     test("Then the length of [0,1,2] should be 3", () => {
       const r = generateArray(3);
-      expect(r).toEqual(3);
-    });
-    test("Then length of [0,1,2,3] should be 4", () => {
-      const r = generateArray(4);
-      expect(r).toEqual(4);
+      expect(r).toEqual([
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ]);
     });
   });
 });
@@ -27,6 +27,19 @@ describe("Given checkForNeighbors function", () => {
         1
       );
       expect(r).toEqual(0);
+    });
+  });
+});
+
+describe("Given checkForWalls function", () => {
+  describe("When we have cells at any wall or edge", () => {
+    test("Then we should check only for the ones who have 8 cells around", () => {
+      const r = checkForWalls([
+        [1, 0, 0],
+        [1, 1, 0],
+        [1, 0, 0],
+      ]);
+      expect(r).toEqual(3);
     });
   });
 });
