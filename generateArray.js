@@ -12,5 +12,3 @@ export const generateArray = (w) => {
 
   return arr;
 };
-
-console.log(generateArray(3));
