@@ -3,7 +3,7 @@ import { checkForNeighbors } from "./checkForNeighbors.js";
 import { checkForWalls } from "./checkForWalls.js";
 import { arrayRandomizer } from "./arrayRandomizer.js";
 const sizeInput = 10;
-let array1 = generateArray(sizeInput);
+const array1 = generateArray(sizeInput);
 arrayRandomizer(array1);
 for (let i = 0; i < array1.length; i++) {
   for (let j = 0; j < array1[i].length; j++) {
