@@ -8,3 +8,20 @@ export const checkForNeighbors = (arr, x, y) => {
 
   return currentCell - arr[x][y];
 };
+
+export const newCell = (arr) => {
+  for (let i = 1; i < arr.length - 1; i++) {
+    for (let j = 1; j < arr[i].length - 1; j++) {
+      const neighbors = checkForNeighbors(arr, i, j);
+      if (neighbors === 2 || neighbors === 3) {
+        arr[i][j] = 1;
+      }
+
+      if (neighbors < 2 || neighbors > 3) {
+        arr[i][j] = 0;
+      }
+    }
+  }
+
+  return arr;
+};
